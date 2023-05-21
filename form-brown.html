@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form-brown.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <title>Consulation Form</title>
+</head>
+<body>
+    <div class="header">
+
+        <nav>
+            <a href="index.html" class="logo"><img src="resources/logo_final.png" alt="Logo"></a>
+            <button class="menu-button">
+                <span class="icon">
+                    <svg viewBox="0 0 175 80" width="40" height="40">
+                        <rect width="80" height="15" fill="#000000" rx="10"></rect>
+                        <rect y="30" width="80" height="15" fill="#000000" rx="10"></rect>
+                        <rect y="60" width="80" height="15" fill="#000000" rx="10"></rect>
+                    </svg>
+                </span>
+            </button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about-us.html">About</a></li>
+            </ul>
+        </nav>
+      
+        <form id="consultation-form">
+            <div class="top">
+                <img id="left" src="/resources/logo_final.png">
+                <p class="right">
+                    Sleep OwlNight <br>
+                    123 Maple Street, Houston, 77002 <br>
+                    sleepowlnight@sleep.com <br>
+                    www.sleepowlnight.com <br>
+                    (182) 12114412 <br>
+                </p>
+     
+    
+            </div>
+            <h2 id="Title_form">Consultation Form</h2>
+            <label for="patient-type">Patient Type:</label>
+            <select id="patient-type" name="patient-type" required>
+                <option value="">Select Patient Type</option>
+                <option value="new-patient">New Patient</option>
+                <option value="follow-up-patient">Follow-up Patient</option>
+            </select>
+            
+            <h3 class="Section-Label">Personal Information</h3>
+            <div class="name">
+                
+                <div class="name-row">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First name" required>
+                </div>
+                
+                <div class="name-row">
+                    <label for="middle-name">Middle Name:</label>
+                    <input type="text" id="middle-name" name="middle-name" placeholder="Middle name">
+                </div>
+
+                <div class="name-row">  
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last name" required>
+                </div>   
+
+                <div class="name-row"> 
+                    <label for="suffix">Suffix:</label>
+                    <input type="text" id="suffix" name="suffix" placeholder="Suffix">
+                </div>
+    
+            </div>
+
+           <div class="person-info">
+                <div class="details-info">
+                    <label for="gender" >Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Choose Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="details-info">
+                    <label for="date">Birthdate</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+            
+            </div>
+
+            <div class="person-info">
+                <div class="details-info">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="details-info">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+           </div>
+
+           <h3 class="Section-Label">Address</h3>
+    
+            <div class="address">
+                <div class="address_row">
+                    <label for="street">Street:</label>
+                    <input type="text" id="street" name="street" placeholder="Enter your street address" required>
+                </div>
+
+                <div class="address_row">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                </div>
+            </div>
+            
+
+            <div class="address">
+                <div class="address_row">
+                    <label for="state">State/Province:</label>
+                    <input type="text" id="state" name="state" placeholder="Enter your state or province" required>
+                </div>
+
+                <div class="address_row">
+                    <label for="postal-code">Postal Code:</label>
+                    <input type="text" id="postal-code" name="postal-code" placeholder="Enter your postal code" required>
+                </div>
+            </div>
+        
+        <h3 class="Section-Label">Time and Date</h3>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <div class="time-selector">
+                <label>Select Time:</label>
+                <div class="time-buttons">
+                  <button type="button" data-time="8:00 AM - 9:00 AM">8:00 AM - 9:00 AM</button>
+                  <button type="button" data-time="9:00 AM - 10:00 AM" class="time_right">9:00 AM - 10:00 AM</button>
+                  <button type="button" data-time="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</button>
+                  <button type="button" data-time="1:00 PM - 2:00 PM" class="time_right">1:00 PM - 2:00 PM</button>
+                  <button type="button" data-time="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</button>
+                </div>
+              </div>
+
+            
+              <div class="submit"> 
+                <button class="submit-button"><span>Book Appointment</span></button> 
+              </div>
+        </form>
+    </div> 
+    
+    <div class="footer">
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="resources/vid.mp4" type="video/mp4">
+            </video>
+                <div class="content">
+                    <h1>"The worst thing in the world is to try to sleep and not to."</h1>
+                    <p>- F. Scott Fitzgerald</p>
+                    <a href="form-brown.html" class="footer_button">GET FREE CONSULTATION NOW!</a>
+                </div>
+        </div>
+        <div class="rec">
+            <div class="upper">
+                <div class="column1">
+                    <div class="logo1">
+                        <img src="resources/logo_final.png" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Earnest Street Mapagmahal Road</p>
+                        <p>Cagayan de Oro City</p>
+                        <p>09227816451</p>
+                        <p>sleepOwlnight@gmail.com</p>
+                    </div>
+                </div>
+                <div class="links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about-us.html">About Us</a>
+                    <a href="categories.html">Categories</a>
+                </div>
+                <div class="contact">
+                    <h4>Contact Us</h4>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="resources/fb.png" alt="fb">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="resources/ig.png" alt="ig">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="resources/twitter.png" alt="twitter">
+                    </a>
+                    <a href="https://www.gmail.com" target="_blank">
+                        <img src="resources/email.png" alt="email">
+                    </a>
+                </div>
+            </div>
+            <div class="lower">
+                <p>© 2023 - All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    
+    <script src="index.js"></script>
+    
+</body>
+</html>
+
+
+
+

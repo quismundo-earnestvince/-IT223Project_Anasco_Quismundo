@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    font-family: 'Varela Round', sans-serif;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.header {
+    display: flex;
+    background-image: url("resources/bg2.jpg");
+    min-height: 790px;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center /* form */
+
+}
+
+nav {
+    display: flex;
+    padding: 0px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.5s;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+nav.sticky {
+    background-color: #8F724C;
+    z-index: 9999;
+}
+
+nav .logo {
+    display: block;
+    margin-top: 5px;
+}
+
+nav .logo img {
+    height: 65px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    padding: 26px 0px;
+}
+
+.header nav ul li a {
+    font-size: 18px;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+.header nav ul li a:hover {
+    color: #291d0c;
+}
+
+nav .menu-button {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+ .submit-box{
+    background-color: #f3efdb;
+    width: 70%;
+    margin-top: 120px;
+    border: solid #cfb68b 5px;
+    border-radius: 20px;
+    
+ }
+ .submit-box h2{
+    font-size: 35px;
+    padding:30px 30px 5px;
+ }
+
+ .submit-box p{
+    font-size: 20px;
+    padding:30px 30px;
+    text-align: justify;
+ }
