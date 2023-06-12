@@ -38,7 +38,9 @@ nav {
     width: 100%;
     transition: background-color 0.5s;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    
+    
+    
 }
 
 nav.sticky {
@@ -49,21 +51,43 @@ nav.sticky {
 nav .logo {
     display: block;
     margin-top: 5px;
+    
 }
 
 nav .logo img {
     height: 65px;
     width: 100%;
+    
 }
+
+
 
 nav ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: auto; 
+}
+
+nav .book-now {
+    display: flex;
+    margin-left: auto; 
+    font-size: 18px;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: #092a5b;
+    font-weight:600;
+    align-items: center;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
 nav ul li {
     padding: 26px 0px;
+    
+    
+  
 }
 
 .header nav ul li a {
@@ -74,7 +98,27 @@ nav ul li {
     border-radius: 5px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    
+    
 }
+
+
+
+
+nav .right a{
+    font-size: 18px;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: #092a5b;
+    font-weight:600;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    
+    
+}
+
+
 
 nav ul li a.active,
 .header nav ul li a:hover {
@@ -279,10 +323,12 @@ nav .menu-button {
     position: absolute;
     left: 0;
     bottom: 0;
+      /* edit the width to fit card */
     width: 100%;
     padding: 20px;
     background: #213161;
     border-top-left-radius: 20px;
+      /* edit here to change the height of the content box */
     transform: translateY(110px);
     transition: transform .25s;
   }
@@ -360,7 +406,7 @@ nav .menu-button {
    content: " ";
    width: 1.5625rem;
    height: 2px;
-   background: black; 
+   background: black; /* inside line color */
    top: 50%;
    left: 1.5em;
    position: absolute;
@@ -378,7 +424,7 @@ nav .menu-button {
    transition: all 0.3s ease-in-out;
    text-transform: uppercase;
    text-decoration: none;
-   color: black; 
+   color: black; /* inside text color */
   }
   
   .book-btn .top-key {
@@ -387,7 +433,7 @@ nav .menu-button {
    top: -2px;
    left: 0.625rem;
    position: absolute;
-   background: #EDE0D4; 
+   background: #EDE0D4; /* outside top gray line color */
    transition: width 0.5s ease-out, left 0.3s ease-out;
   }
   
@@ -705,7 +751,9 @@ nav .menu-button {
         display: flex;
         flex-direction: column;
     }
-
+    /* .navbar{
+        padding-left: 150px;
+    } */
     .section_1{
         display: flex;
         flex-direction: column;
@@ -737,35 +785,62 @@ nav .menu-button {
 }
 
 
-@media screen and (max-width:850px){
+@media screen and (max-width:850px){ /* nav */
 
     
     nav{
-        justify-content: space-between;
+        
+        padding-left: 55px;
+        justify-content: flex-start;
         
     }
     nav .menu-button {
-        display: block;
+        display: flex;
         background-color: transparent;
         outline: 0px;
-        border: none;
-        margin-top: 20px;
+        border: none; 
+        
+        place-items: center;  
     }
 
-    .icon rect {
-        fill: white;
+    nav .book-now{
+        font-size: 20px;
     }
+
+    nav .menu-button h3{
+        font-size: 22px;
+        font-weight: 100;
+        
+        margin-left: 30px;
+       
+    }
+
+    
 
     nav ul {
         position: fixed;
-        top: 69px;
+        top: 75px;
         left: -100%;
         background: #182A48;
         height: 100vh;
-        width: 100%;
+        width: 50%;
         text-align: center;
         display: block;
-        transition: all 0.3s ease;
+        transition: all 0.4s ease;
+        padding:0;
+   
+    }
+
+    
+    .header nav ul li a {
+        width: 100%;
+        margin-left: 0px;
+        display: block;
+        font-size: 20px; 
+    }
+
+    nav ul li{
+        padding-left: 15px;
     }
 
     .menu-button:target ~ ul {
@@ -775,15 +850,9 @@ nav .menu-button {
     nav ul li {
         width: 100%;
         margin: 40px 0;
+        
     }
 
-    nav ul li a {
-        width: 100%;
-        margin-left: 0%;
-        display: block;
-        font-size: 20px;
-        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
 
     .menu-button:target ~ ul li a
     {
@@ -791,15 +860,120 @@ nav .menu-button {
 
     }
 
-    nav ul li a.active,
-    nav ul li a:hover {
-        background: none;
-        color: cyan;
-    }
     nav ul.show {
         left: 0;
     }
-
+    
     
 }
+
+@media screen and (max-width:414px){
+
+    nav{
+        padding-left: 25px;
+    }
+
+    nav .logo img {
+        padding-top: 3px;
+        height: 60px;
+        
   
+      }
+    .header nav ul li a{
+        font-size: 13px;
+        margin: 0px;
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    
+    nav .menu-button h3{
+        font-size: 10px;
+        font-weight: 100;
+        margin-left: 10px;
+        
+        
+       
+    }
+
+    nav .book-now{
+        font-size: 10px;
+        margin-left: 15px;
+        padding: 0 10px;
+        
+    }
+
+    nav ul {
+        top: 70px;
+
+    }
+
+    
+    .header nav ul li a {
+        width: 100%;
+        margin-left: 0px;
+        display: block;
+        font-size: 20px; 
+    }
+
+    nav ul li{
+        
+        padding-left: 0px;
+        align-items: center;
+        
+
+    }
+}
+
+@media screen and (max-width:870px){
+    .header nav ul li a{
+        padding: 0px 15px;
+        font-size: 17px;
+    }
+
+   
+}
+@media screen and (max-width:510px){
+    nav .book-now{
+        font-size: 16px;
+       
+    }
+
+    nav .menu-button h3{
+        font-size: 16px;
+        font-weight: 100; 
+        margin-left: 10px;
+       
+    }
+
+    nav{
+        padding-left: 20px;
+    }
+
+}
+
+@media screen and (max-width:370px){
+     
+    nav .menu-button h3{
+        font-size: 15px;
+        font-weight: 100;
+        margin-left: 10px;
+        
+    }
+
+    nav .book-now{
+        font-size: 15px;
+        margin-left: 15px;
+        padding: 0 10px;
+        
+    }
+    nav .logo img {
+        padding-top: 3px;
+        height: 55px;
+        
+      }
+      nav ul {
+        top: 65px;
+
+    }
+}
