@@ -18,28 +18,123 @@
         <nav>
             <a href="index.html" class="logo"><img src="resources/logo_final.png" alt="Logo"></a>
             <button class="menu-button">
-                <span class="icon">
-                    <svg viewBox="0 0 175 80" width="40" height="40">
-                        <rect width="80" height="15" fill="#000000" rx="10"></rect>
-                        <rect y="30" width="80" height="15" fill="#000000" rx="10"></rect>
-                        <rect y="60" width="80" height="15" fill="#000000" rx="10"></rect>
-                    </svg>
+                <h3 class="menu-text">Menu</h3>
                 </span>
             </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="categories.html">Categories</a></li>
-              
                 <li><a href="about-us.html">About</a></li>
+                <li><a href="specialist.html">Specialist</a></li>
             </ul>
+            <a href="form-brown.html" class="book-now">Book Now</a>
+            
         </nav>
 
         <div class="submit-box">
             <h2>Form Submitted.</h2>
-            <p>Thank you for submitting the consultation form.  We kindly request you to check your email inbox for further details. We will be sending you an email shortly, providing you with important information regarding your appointment, including the date, time, and instructions to join the consultation.</p>
+            <p>Thank you <span id="nameUser"></span> for submitting the consultation form.  We kindly request you to check your email inbox for further details. We will be sending you an email shortly, providing you with important information regarding your appointment, including the date, time, and instructions to join the consultation.</p>
             
         </div>
-    </div>    
+    </div> 
+
+    <div class="footer">
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="resources/vid.mp4" type="video/mp4">
+            </video>
+                <div class="content">
+                    <h1>"The worst thing in the world is to try to sleep and not to."</h1>
+                    <p>- F. Scott Fitzgerald</p>
+                    <a href="form-brown.html" class="footer_button">GET FREE CONSULTATION NOW!</a>
+                </div>
+        </div>
+        <div class="rec">
+            <div class="upper">
+                <div class="column1">
+                    <div class="logo1">
+                        <img src="resources/logo_final.png" alt="">
+                    </div>
+                    <div class="details">
+                        <p>Earnest Street Mapagmahal Road</p>
+                        <p>Cagayan de Oro City</p>
+                        <p>09227816451</p>
+                        <p>sleepOwlnight@gmail.com</p>
+                    </div>
+                </div>
+                <div class="links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="aboutus.html">About</a>
+                    <a href="categories.html">Categories</a>
+                    <a href="specialist.html">Specialist</a>
+                    <a href="form-brown.html">Book Now</a>
+                </div>
+                <div class="contact">
+                    <h4>Contact Us</h4>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="resources/fb.png" alt="fb">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="resources/ig.png" alt="ig">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="resources/twitter.png" alt="twitter">
+                    </a>
+                    <a href="https://www.gmail.com" target="_blank">
+                        <img src="resources/email.png" alt="email">
+                    </a>
+                </div>
+            </div>
+            <div class="lower">
+                <p>© 2023 - All Rights Reserved</p>
+            </div>
+        </div>
+    </div> 
     
+  
+<script src="index.js"> </script>
+  
+<script>   
+    // js prints the data inputted on form in THIS page ONLY & innerTExt the span
+    var submittedName = localStorage.getItem('submittedName');
+
+    var nameUserElement = document.getElementById('nameUser');
+    if (nameUserElement && submittedName) {
+    nameUserElement.innerText = submittedName;
+    }
+ 
+    document.addEventListener("DOMContentLoaded", function() {
+  var patientType = localStorage.getItem("patientType");
+  var middleName = localStorage.getItem("middleName");
+  var lastName = localStorage.getItem("lastName");
+  var suffix = localStorage.getItem("suffix");
+  var gender = localStorage.getItem("gender");
+  var birthdate = localStorage.getItem("birthdate");
+  var email = localStorage.getItem("email");
+  var phone = localStorage.getItem("phone");
+  var street = localStorage.getItem("street");
+  var city = localStorage.getItem("city");  
+  var state = localStorage.getItem("state");
+  var postalCode = localStorage.getItem("postalCode");
+  var date = localStorage.getItem("date");
+
+  console.log("Patient Type:", patientType);
+  console.log("First Name:", submittedName);
+  console.log("Middle Name:", middleName);
+  console.log("Last Name:", lastName);
+  console.log("Suffix:", suffix);
+  console.log("Gender:", gender);
+  console.log("Birthdate:", birthdate);
+  console.log("Email:", email);
+  console.log("Phone:", phone);
+  console.log("Street:", street);
+  console.log("City:", city);
+  console.log("State:", state);
+  console.log("Postal Code:", postalCode);
+  console.log("Date:", date);
+});
+</script>
+   
 </body>
 </html>
